@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Nilesh Hirani">
+    <title>Admin Panel</title>
+
+	<!-- Material Design fonts -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Bootstrap Latest compiled and minified CSS and JavaScript -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- Bootstrap Material Design -->
+	<link href="css/bootstrap-material-design.css" rel="stylesheet">
+	<link href="css/ripples.min.css" rel="stylesheet">
+	<link href="css/jquery.dropdown.css" rel="stylesheet">
+
+	<script src="js/material.min.js"></script>
+	<script src="js/ripples.min.js"></script>
+	<script src="js/jquery.dropdown.js"></script>
+	<script>
+	$(document).ready(function(){
+		$.material.init();
+		$("select").dropdown();
+	});
+	</script>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-offset-1 col-sm-offset-4 col-sm-4 col-xs-10" style="margin-top:50px;margin-bottom:50px;">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <p class="panel-title" style="text-align: center; font-size: 36px; line-height: 1.5;">
+            <i class="material-icons" style="font-size: 48px;">school</i><br>
+            Enter Encarta ID</p>
+          </div>
+          <div class="panel-body">
+            <form action="" method="POST" style="margin-top: 12px;">
+              <div class="form-group label-floating">
+                <div class="input-group margin-bottom-sm">
+                  <span class="input-group-addon"><i class="material-icons">person</i></span>
+                  <label for="encarta_id" class="control-label">Encarta ID</label>
+                  <input class="form-control" type="text" name="encarta_id" maxlength="255"  required>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-success pull-right" name="user_login">Submit</button>
+            </form>
+            <div class="clearfix"></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

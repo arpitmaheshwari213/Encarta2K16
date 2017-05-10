@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Admin Panel</title>
+
+	<!-- Material Design fonts -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Bootstrap Latest compiled and minified CSS and JavaScript -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- Bootstrap Material Design -->
+	<link href="css/bootstrap-material-design.css" rel="stylesheet">
+	<link href="css/ripples.min.css" rel="stylesheet">
+	<link href="css/jquery.dropdown.css" rel="stylesheet">
+
+	<script src="js/material.min.js"></script>
+	<script src="js/ripples.min.js"></script>
+	<script src="js/jquery.dropdown.js"></script>
+	<script>
+	$(document).ready(function(){
+		$.material.init();
+		$("select").dropdown();
+	});
+	</script>
+</head>
+<body>
+
+  <div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-offset-3 col-sm-6 col-xs-offset-1 col-xs-10" style="margin-top:50px;margin-bottom:50px;">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<p class="panel-title" style="text-align: center; font-size: 36px; line-height: 1.5;">
+						Select the events you want to participate in
+					</p>
+				</div>
+				<div class="panel-body">
+					<h3> Packages: </h3>
+					<div class="form-group">
+						<div class="radio">
+							<label>
+								<input type="radio" name="package" value="general"  onclick="package(this.value)" >
+								General Registration(Rs. 150)
+							</label>
+						</div>
+						<div class="radio">
+							<label>
+								<input type="radio" name="package" value="gamesonly" onclick="package(this.value)" >
+								Gamezvilla Only(Rs. 100)
+							</label>
+						</div>
+						<div class="radio">
+							<label>
+								<input type="radio" name="package" value="allevents" onclick="package(this.value)" >
+								All Events(Rs. 305)
+							</label>
+						</div>
+						<div class="radio">
+							<label>
+								<input type="radio" name="package" value="customize" id="custom">
+								Customize Yourself(Select as per your choice)
+							</label>
+						</div>
+					</div>
+
+					<hr>
+					<form name="myForm" action=""  method="post" >
+						<div class="form-group">
+							CODE FIESTA
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="code_marathon" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="code_marathon" onclick="total()" > CODE MARATHON
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="insomnia" onclick="total()" >
+									<input  class="general" type="checkbox" value="1" name="insomnia" onclick="total()" > INSOMNIA
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="code_mutants" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="code_mutants" onclick="total()" > CODE MUTANTS
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="clean_the_bugs" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="clean_the_bugs" onclick="total()" > CLEAN THE BUGS
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="python_phreakers" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="python_phreakers" onclick="total()" > PYTHON PHREAKERS
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="klutzy_code" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="klutzy_code" onclick="total()" > KLUTZY CODE
+								</label>
+							</div>
+							<div class="checkbox" >
+								<label>
+									<input type="hidden" value="0" name="chaos" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="chaos" onclick="total()" > CHAOS
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="bragging" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="bragging" onclick="total()" > BRAGGING
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="the_gauntlet" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="the_gauntlet" onclick="total()" > THE GAUNTLET
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="bandit" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="bandit" onclick="total()" > BANDIT
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="webcrats" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="webcrats" onclick="total()" > WEBCRATS
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							QUIZZARD
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="euts" onclick="total()" >
+									<input  class="general" type="checkbox" value="1" name="euts" onclick="total()" > KBC
+								</label>
+							</div>
+							<div class="checkbox" >
+								<label>
+									<input type="hidden" value="0" name="head_rush" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="head_rush" onclick="total()" > HEAD RUSH
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="digital_fortress" onclick="total()" >
+									<input  class="general" type="checkbox" value="1" name="digital_fortress" onclick="total()" > DIGITAL FORTRESS
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="quiz_up" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="quiz_up" onclick="total()" > QUIZ UP
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							CREATRIX
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="accelera" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="accelera" onclick="total()" > ACCELERA
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="youth_parliament" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="youth_parliament" onclick="total()" > YOUTH PARLIAMENT
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="mad_about_ads" onclick="total()" >
+									<input  class="general" type="checkbox" value="1" name="mad_about_ads" onclick="total()" > MAD ABOUT ADS
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="art_design" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="art_design" onclick="total()" > ART DESIGN
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							INGENIEUR
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="blue_print" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="blue_print" onclick="total()" > BLUE PRINT
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="circuit_cipher" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="circuit_cipher" onclick="total()" > CIRCUIT CIPHER
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="line_follower_race" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="line_follower_race" onclick="total()" > LINE FOLLOWER RACE
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="open_hardware" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="open_hardware" onclick="total()" > OPEN HARDWARE
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="open_software" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="open_software" onclick="total()" > OPEN SOFTWARE
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							MANIGMA
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="dalal_street"  onclick="total()" >
+									<input  type="checkbox" value="1" name="dalal_street" id="dalal_street" onclick="total()" > DALAL STREET(Rs.25)
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="encarta_hunt"  onclick="total()" >
+									<input  type="checkbox" value="1" name="encarta_hunt" id="encarta_hunt" onclick="total()" > ALOHOMORA(Rs.50)
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="pick_a_pic" onclick="total()" >
+									<input class="general" type="checkbox" value="1" name="pick_a_pic" onclick="total()" > PICK A PIC
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							GAMEZVILLA
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="counter_strike"  onclick="total()" >
+									<input class="games" type="checkbox" value="1" name="counter_strike" id="counter_strike" onclick="total()" > COUNTER STRIKE(Rs.50)
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="need_for_speed" onclick="total()" >
+									<input class="general games" type="checkbox" value="1" name="need_for_speed" id="need_for_speed" onclick="total()" > NEED FOR SPEED
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="hidden" value="0" name="mini_militia"  onclick="total()" >
+									<input class="games" type="checkbox" value="1" name="mini_militia" id="mini_militia" onclick="total();" > MINI MILITIA(Rs.30)
+								</label>
+							</div>
+						</div>
+						<button type="submit" class="btn btn-success btn-raised btn-lg" name="event_update" value="true" id="sub_btn">Submit</button>
+						<label class="pull-right" style="color: #333;">
+							Total
+							<input type="text" name="Total" id="Total" style="width:50px;" value="0" disabled>
+							<input type="number" name="total1" id="total2" style="width:50px;" value="0" hidden="true">
+						</label>
+						<div class="clearfix">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+  <script>
+  	function package(abc)
+  	{
+  		var inputCheck = document.getElementsByTagName("input");
+  		//refresh each checkbox every time radio button is clicked
+  		for (var i=0; i<inputCheck.length; i++) {
+  			if (inputCheck[i].type == "checkbox" )
+  			inputCheck[i].checked=false;
+  		}
+  		if(abc=='general'){
+  			for(i=0;i<document.getElementsByClassName('general').length;i++)
+  				document.getElementsByClassName('general')[i].checked=true;
+  		}
+  		else if(abc=='gamesonly'){
+  			for(i=0;i<document.getElementsByClassName('games').length;i++)
+  				document.getElementsByClassName('games')[i].checked=true;
+  		}
+  		else if(abc=='allevents'){
+  			for (var i=0; i<inputCheck.length; i++) {
+  				if (inputCheck[i].type == "checkbox" )
+  					inputCheck[i].checked=true;
+  			}
+  		}
+  		var inputElems = document.getElementsByTagName("input");
+  		count = 0;
+  		var t = 0;
+  		for (var i=0; i<inputElems.length; i++) {
+  			if (inputElems[i].type == "checkbox" && inputElems[i].checked == true){
+  				count++;
+  			}
+  		}
+
+      if(document.getElementById("dalal_street").checked)
+        {t=t+25;count--;}
+      if(document.getElementById("encarta_hunt").checked)
+        {t=t+50;count--;}
+
+  		if(document.getElementById("counter_strike").checked && document.getElementById("need_for_speed").checked && document.getElementById("mini_militia").checked && count==3)
+  			{t=100;count=0;}
+
+  		else {
+  			if(document.getElementById("counter_strike").checked)
+  				{t=t+50;count--;}
+  			if(document.getElementById("mini_militia").checked)
+  				{t=t+30;count--;}
+  			if(document.getElementById("need_for_speed").checked)
+  				{t=t+50;count--;}
+  		}
+
+
+  		if(count>0)
+  			{t=t+150;
+  				if(document.getElementById("need_for_speed").checked)
+  				{
+  					t=t-50;
+  				}
+
+  			}
+
+  			document.getElementById("Total").value = t;
+  			document.getElementById("total2").value = t;
+  	}
+
+  </script>
+  <script>
+
+  	function total()
+  	{
+  		//console.log('called total()');
+
+  		document.getElementById("custom").checked = true;
+
+
+  		var inputElems = document.getElementsByTagName("input");
+  		count = 0;
+  		var t = 0;
+  		for (var i=0; i<inputElems.length; i++) {
+  			if (inputElems[i].type == "checkbox" && inputElems[i].checked == true){
+  				count++;
+  			}
+  		}
+      if(document.getElementById("dalal_street").checked)
+        {t=t+25;count--;}
+      if(document.getElementById("encarta_hunt").checked)
+        {t=t+50;count--;}
+
+  		if(document.getElementById("counter_strike").checked && document.getElementById("need_for_speed").checked && document.getElementById("mini_militia").checked && count==3)
+  			{t=t+100;count=0;}
+
+  		else {
+  			if(document.getElementById("counter_strike").checked)
+  				{t=t+50;count--;}
+  			if(document.getElementById("mini_militia").checked)
+  				{t=t+30;count--;}
+  			if(document.getElementById("need_for_speed").checked)
+  				{t=t+50;count--;}
+  		}
+
+
+  		if(count>0)
+  			{t=t+150;
+  				if(document.getElementById("need_for_speed").checked)
+  				{
+  					t=t-50;
+  				}
+
+  			}
+
+  			document.getElementById("Total").value = t;
+  			document.getElementById("total2").value = t;
+  	}
+  	total();
+  	function xxx(){
+  		var inputElems = document.getElementsByTagName("input");
+  		for (var i=0; i<inputElems.length; i++) {
+  			inputElems[i].disabled=true;
+  		}
+  		document.getElementById("sub_btn").disabled=true;
+  	}
+
+  </script>
+  </body>
+  </html>
