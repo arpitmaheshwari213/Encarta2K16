@@ -1,0 +1,83 @@
+/*		Default Layout: 992px.
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+/*		Tablet Layout: 768px.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /*---------------------------------------------
+					Index Start
+-----------------------------------------------*/
+  /*--
+	wrapper Start
+--*/
+  #wrapper {
+    text-align: center;
+  }
+  #wrapper .block img {
+    padding-top: 100px;
+    width: 50%;
+  }
+
+  /*--
+	features Start
+--*/
+  #features {
+    text-align: center;
+  }
+  
+}
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+@media only screen and (max-width: 767px) {
+  /*---------------------------------------------
+					Index Start
+-----------------------------------------------*/
+  .heading {
+    padding-left: 0px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 13px;
+  }
+    /*--
+	wrapper Start
+--*/
+  #wrapper {
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 100px;
+  }
+  #wrapper .block img {
+    padding-top: 100px;
+    padding-left: 0px;
+    width: 100%;
+  }
+
+}
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+/*	Retina media query.
+	Overrides styles for devices with a
+	device-pixel-ratio of 2+, such as iPhone 4.
+-----------------------------------------------    */

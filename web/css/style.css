@@ -1,0 +1,117 @@
+/*--
+	Common Css
+--*/
+body {
+  font-family:  sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family:  sans-serif;
+}
+h2 {
+  font-size: 28px;
+  font-weight: 400;
+}
+h3 {
+  font-size: 24px;
+  font-weight: 300;
+}
+p {
+  font-size: 20px;
+  line-height: 28px;
+  font-family: verdana;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a,
+a:active,
+a:focus,
+a:active {
+  text-decoration: none !important;
+}
+.section-title {
+  margin-bottom: 70px;
+}
+.section-title h2 {
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 600;
+}
+.section-title p {
+  font-family: serif;
+  font-style: italic;
+  color: #666;
+}
+
+/*--
+	wrapper Start
+--*/
+#intro {
+  padding: 100px 0;
+}
+#intro .block h2 {
+  padding-top: 35px;
+  line-height: 27px;
+  margin: 0;
+}
+#intro .block p {
+  color: #7B7B7B;
+  padding-top: 20px;
+}
+#intro .block img {
+  padding-left: 40px;
+  width: 100%;
+}
+#intro .section-title {
+  margin-bottom: 0px;
+}
+#intro .section-title p {
+  padding-top: 20px;
+}
+/*--
+	Feature Start
+--*/
+#feature {
+  background: url("../img/featue-bg.jpg");
+  background-position: 50% 94px;
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: visible;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #fff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  padding: 100px 0;
+}
+#feature h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+#feature p {
+  color: #8d8f92;
+  margin-bottom: 20px;
+}
+#feature .btn-view-works {
+  background: #655E7A;
+  color: #fff;
+  padding: 10px 20px;
+}

@@ -1,0 +1,30 @@
+
+
+ .se-pre-con {
+position: fixed;
+left: 45%;
+top: 45%;
+z-index: 9999;
+
+  }
+  .loader {
+border-radius: 50%;
+border-top: 5px solid lightgreen;
+border-bottom: 5px solid red;
+border-left: 5px solid lightblue;
+border-right: 5px solid yellow;
+width: 85px;
+height: 85px;
+-webkit-animation: spin 2s linear infinite;
+animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+0% { -webkit-transform: rotate(0deg); }
+100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}

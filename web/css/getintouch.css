@@ -1,0 +1,60 @@
+#contact{
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 17px 0px, rgba(0, 0, 0, 0.3) 0px 6px 20px 0px;
+padding:20px 40px;
+}
+#contact p{
+  font-size:17px;
+
+}
+.footer{
+  padding:20px 40px;
+  padding-bottom: 0px;
+background-color:#b22e2e;
+opacity:0.95;
+box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 17px 0px, rgba(0, 0, 0, 0.3) 0px 6px 20px 0px;
+}
+.footer div img{
+
+padding:5px;
+margin:10px;
+
+}
+
+.footer div h3,h5{
+color:white;
+}
+.footer div p{
+  color:white;
+  font-size:17px;
+}
+@media only screen and (max-width : 978px)
+{
+  #contact{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 8px 0px, rgba(0, 0, 0, 0.3) 0px 3px 10px 0px;
+  padding:10px 20px;
+  }
+  #contact p{
+    font-size:14px;
+
+  }
+  .footer{
+    padding:10px 20px;
+  background-color:#b22e2e;
+  opacity:0.95;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 8px 0px, rgba(0, 0, 0, 0.3) 0px 3px 10px 0px;
+  }
+  .footer div img{
+
+  padding:5px;
+  margin:10px;
+
+  }
+
+  .footer div h3,h5{
+  color:white;
+  }
+  .footer div p{
+    color:white;
+    font-size:14px;
+  }
+}

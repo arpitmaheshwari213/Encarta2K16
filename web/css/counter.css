@@ -1,0 +1,102 @@
+
+
+.county > span
+{
+    display: inline-block;
+    height: 35%;
+    font-family: serif;
+    position: relative;
+    overflow: hidden;
+    padding-right: 12px;
+}
+
+.county-days-wrapper, .county-hours-wrapper, .county-minutes-wrapper, .county-seconds-wrapper
+{   font-size: 4.2em;
+    overflow: hidden !important;
+    position: relative !important;
+    height: 72px !important;
+    display: inline-block !important;
+    padding: 0px 3px;
+    width:100px;
+    padding-top:10px;
+
+}
+
+.county > span > span
+{
+    display: block;
+}
+.county-label-days, .county-label-hours, .county-label-minutes, .county-label-seconds
+{
+    font-size: 17px ;
+    line-height: 18px !important;
+    height: 18px !important;
+    text-align: center !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    padding-top: 2px;
+    background-color: transparent !important;
+   font-style: italic;
+}
+
+.clear
+{
+    clear: both;
+}
+/*color schemes*/
+/*black*/
+.county.black .county-days-wrapper, .county.black .county-hours-wrapper, .county.black .county-minutes-wrapper, .county.black .county-seconds-wrapper
+{
+  background-color:white;
+    color: #b22e2e;
+
+
+}
+.county.black .county-label-days, .county.black .county-label-hours, .county.black .county-label-minutes, .county.black .county-label-seconds
+{
+    color: black;
+
+}
+.county.black span.separator-left
+{
+
+}
+.county.black span.separator-right
+{
+
+}
+@media only screen and (max-width : 768px) {
+  .county-days-wrapper, .county-hours-wrapper, .county-minutes-wrapper, .county-seconds-wrapper
+  {   font-size: 2.5em;
+      overflow: hidden !important;
+      position: relative !important;
+      height: 50px !important;
+      display: inline-block !important;
+      padding: 0px 3px;
+
+      width:63px;
+  }
+  .county-label-days, .county-label-hours, .county-label-minutes, .county-label-seconds
+  {
+      font-size: 15px;
+}
+
+
+}
+.timer
+    {
+        width:auto;
+        height:auto;
+        float: left;
+        padding: 20px;
+       background-color:white;
+  }
+.timer h1{
+  color:black;
+}
+
+  @media only screen and (max-width : 768px){
+  .timer{  width:251px;
+    padding:5px;
+  }
+}

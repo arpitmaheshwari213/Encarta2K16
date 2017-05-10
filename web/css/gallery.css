@@ -1,0 +1,90 @@
+
+
+@media only screen and (min-width : 1000px) {
+.slider-wrap {
+position: relative;
+margin-top: 10px ;
+margin-bottom:100px;
+margin-left: auto;
+margin-right: auto;
+width: 1000px;
+padding:50px;
+height:400px;
+background-color:#f1f1f1;
+
+}
+.slider {
+position: relative;
+width: 900px;
+margin: auto;
+
+
+}
+#gallery{
+  margin-top:100px;
+
+}
+ul {
+margin: 0;
+padding: 0;
+
+}
+ul .imgli {
+list-style: none;
+text-align: center;
+height:275px;
+background-color:#f1f1f1;
+padding-top:0px;
+}
+ul .imgli .photo{
+
+display: inline-block;
+vertical-align: middle;
+width: 250px;
+height: 250px;
+background: black;
+border:solid 6px white;
+box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 17px 0px, rgba(0, 0, 0, 0.3) 0px 6px 20px 0px;
+}
+.slider-arrow {
+position: absolute;
+top: 150px;
+width: 30px;
+height: 30px;
+background: #d12e2e;
+color: #fff;
+text-align:center;
+text-decoration: none;
+border-radius: 0%;
+box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 17px 0px, rgba(0, 0, 0, 0.3) 0px 6px 20px 0px;
+}
+.slider-arrow:hover{
+background:black;
+}
+.sa-left {
+left: 10px;
+}
+.sa-right {
+right: 10px;
+}
+
+}
+@media only screen and (max-width :1000px) {
+  ul .imgli {
+  list-style: none;
+  height:210px;
+  }
+  ul .imgli .photo{
+
+  display: inline-block;
+  vertical-align: middle;
+  width: 200px;
+  height: 200px;
+  background: black;
+  border:solid 6px white;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 17px 0px, rgba(0, 0, 0, 0.3) 0px 6px 20px 0px;
+  }
+  .slider-arrow{
+    display:none;
+  }
+}
